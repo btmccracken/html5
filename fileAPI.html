@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset=utf-8>
+    <meta name="viewport" content="width=620">
+    <title>HTML5 Demo: File API</title>
+    <link rel="stylesheet" href="css/html5demos.css">
+    <script src="js/h5utils.js"></script>
+</head>
+<body>
+
+<style>
+#holder { border: 10px dashed #ccc; width: 300px; height: 300px; margin: 20px auto;}
+#holder.hover { border: 10px dashed #333; }
+p{ font-family: '20db-webfont'}
+
+@font-face{ 
+	font-family: '20db-webfont';
+	src: url('20db-webfont.eot');
+	src: url('20db-webfont.eot?iefix') format('eot'),
+	     url('20db-webfont.woff') format('woff'),
+	     url('20db-webfont.ttf') format('truetype'),
+	     url('20db-webfont.svg#webfont') format('svg');
+}
+
+</style>
+<article>
+    <div id="holder"></div>
+    <p id="status">File API & FileReader API not supported</p>
+</article>
+<script>
+    var holder = document.getElementById('holder'),
+    state = document.getElementById('status');
+
+    if (typeof window.FileReader === 'undefined') {
+        state.className = 'fail';
+	} else {
+		state.className = 'success';
+		state.innerHTML = 'File API & FileReader available';
+	}
+
+    holder.ondragover = function () { this.className = 'hover'; return false; };
+    holder.ondragend = function () { this.className = ''; return false; };
+    holder.ondrop = function (e) {
+        this.className = '';
+        e.preventDefault();
+
+        var file = e.dataTransfer.files[0],
+        reader = new FileReader();
+        
+		reader.onload = function (event) {
+        	console.log(event.target);
+        	holder.style.background = 'url(' + event.target.result + ') no-repeat center';
+        };
+		
+		console.log(file);
+		reader.readAsDataURL(file);
+	
+		//return false;
+    };
+    </script>
+</body>
+</html>
