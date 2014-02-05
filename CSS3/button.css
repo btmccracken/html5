@@ -1,0 +1,23 @@
+@import "less";
+button{
+	.ui-button-gradient;
+    border: 1px solid rgb(68, 102, 136);
+    -webkit-border-radius:3px; -moz-border-radius: 3px; border-radius: 3px;
+    -moz-box-shadow: 0px 0px 3px rgb(246, 246, 246); -webkit-box-shadow: 0px 0px 3px rgb(246, 246, 246); box-shadow: 0px 0px 3px rgb(246, 246, 246);
+    color: rgba(255, 255, 255, 1);
+    font-size: 14px;
+    padding: .6em;
+}
+
+button:hover{
+    .ui-button-hover-gradient;
+    cursor:pointer;
+
+}
+
+button:active{
+   	.ui-button-hover-gradient;
+    -moz-box-shadow:inset 3px 3px rgb(68, 102, 136);
+    -webkit-box-shadow:inset 3px 3px rgb(68, 102, 136);
+    box-shadow:inset 3px 3px rgb(68, 102, 136);
+}

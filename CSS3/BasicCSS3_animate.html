@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style> 
+div
+{
+width:100px;
+height:100px;
+background:red;
+position:relative;
+animation:myfirst 5s;
+-webkit-animation:myfirst 5s; /* Safari and Chrome */
+}
+
+@keyframes myfirst
+{
+0%   {background:red; left:0px; top:0px;}
+25%  {background:yellow; left:200px; top:0px;}
+50%  {background:blue; left:200px; top:200px;}
+75%  {background:green; left:0px; top:200px;}
+100% {background:red; left:0px; top:0px;}
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+0%   {background:red; left:0px; top:0px;}
+25%  {background:yellow; left:200px; top:0px;}
+50%  {background:blue; left:200px; top:200px;}
+75%  {background:green; left:0px; top:200px;}
+100% {background:red; left:0px; top:0px;}
+}
+</style>
+
+<!--@keyframes	Specifies the animation	
+animation	A shorthand property for all the the animation properties, except the animation-play-state property
+animation-name	Specifies the name of the @keyframes animation
+animation-duration	Specifies how many seconds or milliseconds an animation takes to complete one cycle. Default 0
+animation-timing-function	Describes how the animation will progress over one cycle of its duration. Default "ease"
+    linear	The animation has the same speed from start to end
+    ease	Default value. The animation has a slow start, then fast, before it ends slowly
+    ease-in	The animation has a slow start
+    ease-out	The animation has a slow end
+    ease-in-out	The animation has both a slow start and a slow end
+animation-delay	Specifies when the animation will start. Default 0
+animation-iteration-count	Specifies the number of times an animation is played. Default 1
+	n	A number that defines how many times an animation should be played
+	infinite	Specifies that the animation should be played infinite times (for ever)
+animation-direction	Specifies whether or not the animation should play in reverse on alternate cycles. Default "normal"
+	normal	Default value. The animation should be played as normal
+    reverse	The animation should play in reverse direction
+    alternate	The animation will be played as normal every odd time (1,3,5,etc..) and in reverse direction every even time (2,4,6,etc...)
+    alternate-reverse
+animation-play-state	Specifies whether the animation is running or paused. Default "running"
+
+Shorthand
+animation: myfirst 5s linear 2s infinite alternate;
+
+
+With the translate() method, the element moves from its current position, depending on the parameters given for the left (X-axis) and the top (Y-axis) position:
+
+div
+{
+transform: translate(50px,100px);
+-ms-transform: translate(50px,100px); /* IE 9 */
+-webkit-transform: translate(50px,100px); /* Safari and Chrome */
+}
+
+
+
+With the rotate() method, the element rotates clockwise at a given degree. Negative values are allowed and rotates the element counter-clockwise.
+
+div
+{
+transform: rotate(30deg);
+-ms-transform: rotate(30deg); /* IE 9 */
+-webkit-transform: rotate(30deg); /* Safari and Chrome */
+}
+
+
+With the scale() method, the element increases or decreases the size, depending on the parameters given for the width (X-axis) and the height (Y-axis):
+
+div
+{
+transform: scale(2,4);
+-ms-transform: scale(2,4); /* IE 9 */
+-webkit-transform: scale(2,4); /* Safari and Chrome */
+}
+
+
+With the skew() method, the element turns in a given angle, depending on the parameters given for the horizontal (X-axis) and the vertical (Y-axis) lines:
+
+div
+{
+transform: skew(30deg,20deg);
+-ms-transform: skew(30deg,20deg); /* IE 9 */
+-webkit-transform: skew(30deg,20deg); /* Safari and Chrome */
+}
+
+The matrix() method combines all of the 2D transform methods into one.
+
+The matrix method take six parameters, containing mathematic functions, which allows you to: rotate, scale, move (translate), and skew elements.
+
+div
+{
+transform:matrix(0.866,0.5,-0.5,0.866,0,0);
+-ms-transform:matrix(0.866,0.5,-0.5,0.866,0,0); /* IE 9 */
+-webkit-transform:matrix(0.866,0.5,-0.5,0.866,0,0); /* Safari and Chrome */
+}
+
+http://matthewlein.com/ceaser/
+
+Transition
+
+div {
+  width: 150px;
+  height: 150px;
+  background: red;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-transition: background-color 2s ease-out;
+  -moz-transition: background-color 2s ease-out;
+  -o-transition: background-color 2s ease-out;
+  transition: background-color 2s ease-out;
+}
+
+div:hover {
+  background-color: green;
+  cursor: pointer;
+}
+-->
+</head>
+
+<body>
+
+<div></div>
+</body>
+</html>
